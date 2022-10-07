@@ -45,7 +45,7 @@ try:
         display.lcd_display_string(f'Temp.: {temp}',1)
         display.lcd_display_string(f'Usage: {usag}',2)
     
-        sleep(2) # Wait
+        sleep(1) # Wait
 except KeyboardInterrupt as e:
     print("\n[+] Shutting down...")
     display.lcd_clear()
