@@ -24,11 +24,11 @@ try:
     # Loop section
     while True:
         # Get cpu temperature and usage from os info
-        os.system("sensors | grep temp1: > /tmp/temp.txt") 
-        os.system("grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}' >> /tmp/temp.txt")
+        os.system("sensors | grep temp1: > /dev/shm/temp.txt") 
+        os.system("grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}' >> /dev/shm/temp.txt")
 
         # Read temporary file with values
-        with open('/tmp/temp.txt','r') as f:
+        with open('/dev/shm/temp.txt','r') as f:
             text = f.read().split('\n')
             temp = text[0].split('+')[1] # Get temperature
             usag = text[1] # Get usage
