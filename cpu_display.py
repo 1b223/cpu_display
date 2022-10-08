@@ -41,8 +41,8 @@ try:
         usag = '%-16s' % (usag + '%')
 
         # Display values
-        display.lcd_display_string(f'Temp.: {temp}',1)
-        display.lcd_display_string(f'Usage: {usag}',2)
+        display.lcd_display_string(f'TEMP.: {temp}',1)
+        display.lcd_display_string(f'USAGE: {usag}',2)
     
         sleep(1) # Wait
 except KeyboardInterrupt as e:
