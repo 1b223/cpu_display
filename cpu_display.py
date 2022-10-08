@@ -34,7 +34,6 @@ try:
             usag = text[1] # Get usage
     
         # Formatting values
-        temp = temp.replace('°','o')
         usag = '{:.2f}'.format(float(usag))
 
         # Adding spaces to the end to fit in 16 char line
